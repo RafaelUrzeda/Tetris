@@ -9,6 +9,8 @@ const tablero = Array.from({ length: filas }, () => Array(columnas).fill(null));
 let level = 0;
 let puntuacion = 0;
 let velocidad = 500;
+let ultimoTiempo = 0;
+let acumuladorTiempo = 0;
 
 // Piezas del juego
 const formas = [
@@ -133,15 +135,25 @@ const actualizar = () => {
             velocidad = 500;
         }
     }
-    dibujarTablero();
-    dibujarPieza(piezaActual, x, y);
 };
 
-const jugar = () => {
-    setTimeout(() => {
+const jugar = (tiempoActual) => {
+    if (!ultimoTiempo) {
+        ultimoTiempo = tiempoActual;
+    }
+    const deltaTiempo = tiempoActual - ultimoTiempo;
+    acumuladorTiempo += deltaTiempo;
+
+    if (acumuladorTiempo >= velocidad) {
         actualizar();
-        jugar();
-    }, velocidad);
+        acumuladorTiempo = 0;
+    }
+
+    dibujarTablero();
+    dibujarPieza(piezaActual, x, y);
+
+    ultimoTiempo = tiempoActual;
+    requestAnimationFrame(jugar);
 };
 
 document.addEventListener('keydown', (event) => {
@@ -162,4 +174,4 @@ const rotarPieza = (pieza) => {
     return { ...pieza, forma: nuevaForma };
 };
 
-jugar();
+jugar(0);
