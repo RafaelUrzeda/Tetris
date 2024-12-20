@@ -10,10 +10,19 @@
             display: block;
             margin: 0 auto;
             background: #000;
-        }	
+        }
+        #info {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
+    <div id="info">
+        <p id="score">Puntuación: 0 | Nivel: 0</p>
+    </div>
     <canvas id="tetris" width="300" height="600"></canvas>
     <script src="tetris.js"></script>
 </body>
