@@ -1,6 +1,6 @@
 # Documentación del Proyecto Tetris - ACTIVIDAD UT4
 
-Este proyecto implementa un juego de Tetris en JavaScript utilizando la API de gráficos `canvas` para la creación y manipulación del tablero y las piezas. Cumple con los requisitos mínimos y se han añadido algunas características extra.
+Este proyecto implementa un juego de Tetris en JavaScript utilizando la API de gráficos `canvas` para la creación y manipulación del tablero y las piezas. Cumple con los requisitos mínimos y se han añadido algunas características extra. Además que por decisión propia y por una cuestión puramente estética, los colores no cambian cuando las piezas llegan a su sitio.
 
 ## Estructura del Código
 

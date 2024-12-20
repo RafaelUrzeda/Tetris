@@ -18,7 +18,8 @@ const formas = [
     { nombre: 'O', forma: [[1, 1], [1, 1]], color: 'yellow'},
     { nombre: 'T', forma: [[0, 1, 0], [1, 1, 1]], color: 'purple'},
     { nombre: 'S', forma: [[0, 1, 1], [1, 1, 0]], color: 'green'},
-    { nombre: 'Z', forma: [[1, 1, 0], [0, 1, 1]], color: 'red'}
+    { nombre: 'Z', forma: [[1, 1, 0], [0, 1, 1]], color: 'pink'},
+    { nombre: 'C', forma: [[1, 1, 1], [1, 0, 1]], color: 'red'}
 ];
 
 const puntosNiveles = [
